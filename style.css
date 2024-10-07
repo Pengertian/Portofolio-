@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #010101;
+    color: #f7f7f7;
+
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header{
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: transparent;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #93deff;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #93deff;
+}
+
+.nav-link:hover{
+    color: #482ff7;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color:#93deff;
+}
+.home {
+  display: flex;
+  flex-direction: row; /* Gambar di samping konten teks pada desktop */
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  height: 100vh; /* Pastikan tingginya sesuai */
+}
+
+
+.home-content {
+  max-width: 50%;
+  
+}
+.home-content h1 {
+font-size: 56px;
+font-weight: 700;
+line-height: 1.2;
+}
+
+.home-content h3 {
+  font-size: 35px;
+  font-weight: 700;
+}
+.home-content p {
+  font-size: 16px;
+  margin: 20px 0 40px;
+}
+.home-content .btn-box {
+  width: 345px;
+  height: 50px;
+}
+.btn-box a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #616471;
+    border: 4px solid #616471;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #93deff;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 10px;
+    z-index: 1;
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+.btn-box a:nth-child(2) {
+    background-color: transparent; 
+}
+
+.btn-box a:hover {
+    background-color: #93deff; 
+    color: #1a1a1a; 
+    transform: scale(1.05); 
+}
+
+
+.social-media {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: #616471;
+    border: 4px solid #616471;
+    border-radius: 50%;
+    color: #93deff;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #93deff;
+    border-color: #93deff;
+    transform: translateX(10px);
+}
+
+.social-link i {
+    font-size: 24px;
+}
+.home-img {
+  max-width: 40%;
+    
+}.home-img img {
+  max-width: 100%; 
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  translateY:5rem;
+}
+
+
+  
+  
+
+
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #616471;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+@media only screen and (max-width: 768px) {
+    .home {
+        flex-direction: column; /* Gambar di atas konten teks pada mobile */
+    }
+
+    .home-content {
+        max-width: 100%; /* Konten teks memenuhi lebar penuh pada mobile */
+        text-align: center; /* Opsional: untuk meratakan teks di tengah pada mobile */
+    }
+
+    .home-img {
+        max-width: 80%; /* Gambar lebih kecil agar lebih sesuai di mobile */
+        margin-bottom: 20px; /* Memberi jarak di bawah gambar untuk tampilan mobile */
+    }
+}
